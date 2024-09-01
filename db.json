@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@gym.com",
+      "password": "admin123",
+      "role": "admin",
+      "active": false
+    },
+    {
+      "id": 2,
+      "name": "User",
+      "email": "user@example.com",
+      "password": "user123",
+      "role": "viewer"
+    },
+    {
+      "name": "zully perdomo Garzon",
+      "email": "zully13gpvan@gmail.com",
+      "password": "1234567890",
+      "role": "viewer",
+      "id": 3
+    },
+    {
+      "name": "zully perdomo",
+      "email": "zully.perdomo@linktic.com",
+      "password": "1234567890",
+      "role": "viewer",
+      "id": 4
+    }
+  ]
+}

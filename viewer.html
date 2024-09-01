@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Gym</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Gym</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="viewer.html">Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-4">
+        <h1>Perfil</h1>
+        <div id="membershipInfo">
+            <!-- Información de la membresía se cargará aquí -->
+        </div>
+        <form id="profileForm" class="mt-4">
+            <h2>Actualizar Perfil</h2>
+            <div class="mb-3">
+                <label for="profilePicture" class="form-label">Foto de Perfil</label>
+                <input type="file" class="form-control" id="profilePicture">
+            </div>
+            <div class="mb-3">
+                <label for="profileEmail" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="profileEmail" required>
+            </div>
+            <div class="mb-3">
+                <label for="profileName" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="profileName" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Actualizar Perfil</button>
+        </form>
+    </main>
+    <footer class="bg-light py-3 mt-4">
+        <div class="container">
+            <p class="text-center mb-0">© 2024 Gym - Todos los derechos reservados</p>
+        </div>
+    </footer>
+    <script src="js/viewer.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+            // Verificar si el usuario está autenticado y es un visualizador
+            if (!loggedInUser || loggedInUser.role !== 'viewer') {
+                window.location.href = 'login.html'; // Redirigir si no es visualizador
+                return;
+            }
+
+            // Cargar información de membresía
+            fetch(`http://localhost:3000/users/${loggedInUser.id}`)
+                .then(response => response.json())
+                .then(user => {
+                    // Mostrar información de membresía
+                    document.getElementById('membershipInfo').innerHTML = `
+                        <h2>Mi Membresía</h2>
+                        <p>Plan: ${user.membershipPlan || 'No asignado'}</p>
+                        <button class="btn btn-${user.active ? 'danger' : 'success'}" id="membershipToggle">
+                            ${user.active ? 'Cancelar Membresía' : 'Activar Membresía'}
+                        </button>
+                    `;
+
+                    // Configuración inicial del formulario
+                    document.getElementById('profileEmail').value = user.email;
+                    document.getElementById('profileName').value = user.name;
+
+                    // Manejar el cambio de estado de la membresía
+                    document.getElementById('membershipToggle').addEventListener('click', () => {
+                        updateMembershipStatus(!user.active);
+                    });
+
+                    // Manejar la actualización del perfil
+                    document.getElementById('profileForm').addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        const updatedUser = {
+                            name: document.getElementById('profileName').value,
+                            email: document.getElementById('profileEmail').value,
+                            // Para la foto de perfil, necesitarías una funcionalidad adicional para manejar archivos
+                        };
+                        updateUserProfile(updatedUser);
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+
+            function updateMembershipStatus(active) {
+                fetch(`http://localhost:3000/users/${loggedInUser.id}`, {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ active: active })
+                })
+                .then(() => location.reload());
+            }
+
+            function updateUserProfile(updatedUser) {
+                fetch(`http://localhost:3000/users/${loggedInUser.id}`, {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(updatedUser)
+                })
+                .then(() => alert('Perfil actualizado con éxito.'));
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
