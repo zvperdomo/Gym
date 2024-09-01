@@ -2,32 +2,57 @@
   "users": [
     {
       "id": 1,
-      "name": "Admin",
+      "name": "Juan Pérez",
       "email": "admin@gym.com",
-      "password": "admin123",
+      "password": "123456",
       "role": "admin",
-      "active": false
+      "active": true
     },
     {
       "id": 2,
-      "name": "User",
-      "email": "user@example.com",
-      "password": "user123",
-      "role": "viewer"
+      "name": "María López",
+      "email": "maria@example.com",
+      "password": "654321",
+      "role": "viewer",
+      "active": true
+    }
+  ],
+  "memberships": [
+    {
+      "id": 1,
+      "userId": 2,
+      "status": true,
+      "plan": "Mensual",
+      "startDate": "2024-01-01",
+      "endDate": "2024-01-31"
     },
     {
-      "name": "zully perdomo Garzon",
-      "email": "zully13gpvan@gmail.com",
-      "password": "1234567890",
-      "role": "viewer",
-      "id": 3
+      "id": 2,
+      "userId": 2,
+      "status": false,
+      "plan": "Trimestral",
+      "startDate": "2024-02-01",
+      "endDate": "2024-04-30"
+    }
+  ],
+  "plans": [
+    {
+      "id": 1,
+      "name": "Mensual",
+      "description": "Acceso completo al gimnasio durante un mes.",
+      "price": 30
     },
     {
-      "name": "zully perdomo",
-      "email": "zully.perdomo@linktic.com",
-      "password": "1234567890",
-      "role": "viewer",
-      "id": 4
+      "id": 2,
+      "name": "Trimestral",
+      "description": "Acceso completo al gimnasio durante tres meses.",
+      "price": 80
+    },
+    {
+      "id": 3,
+      "name": "Anual",
+      "description": "Acceso completo al gimnasio durante un año.",
+      "price": 250
     }
   ]
 }

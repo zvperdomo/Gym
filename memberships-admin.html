@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administración - Gym</title>
+    <title>Administración de Membresías - Gym</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -13,7 +13,6 @@
             <a class="navbar-brand" href="index.html">Gym</a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="admin.html">Administración de Usuarios</a></li>
                     <li class="nav-item"><a class="nav-link" href="memberships-admin.html">Administración de Membresías</a></li>
                     <li class="nav-item"><a class="nav-link" href="logout.html">Cerrar Sesión</a></li>
@@ -22,20 +21,20 @@
         </nav>
     </header>
     <main class="container mt-4">
-        <h1>Administración de Usuarios</h1>
-        <table class="table">
+        <h1>Administración de Membresías</h1>
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Correo Electrónico</th>
-                    <th>Rol</th>
+                    <th>Nombre del Usuario</th>
                     <th>Estado</th>
-                    <th>Acciones</th>
+                    <th>Tipo de Membresía</th>
+                    <th>Fecha de Inicio</th>
+                    <th>Fecha de Fin</th>
                 </tr>
             </thead>
-            <tbody id="userTable">
-                <!-- Aquí se cargarán los usuarios -->
+            <tbody id="membershipList">
+                <!-- Aquí se mostrará la lista de membresías -->
             </tbody>
         </table>
     </main>
@@ -44,7 +43,7 @@
             <p class="text-center mb-0">© 2024 Gym - Todos los derechos reservados</p>
         </div>
     </footer>
-    <script src="js/admin.js"></script>
+    <script src="js/memberships-admin.js"></script>
 </body>
 </html>
 
