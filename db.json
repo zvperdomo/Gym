@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Juan Pérez",
       "email": "admin@gym.com",
       "password": "123456",
@@ -9,50 +9,82 @@
       "active": true
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "María López",
-      "email": "maria@example.com",
+      "email": "maria@gmail.com",
       "password": "654321",
       "role": "viewer",
       "active": true
+    },
+    {
+      "id": "3",
+      "name": "Carlos Sánchez",
+      "email": "carlos@gmail.com",
+      "password": "password123",
+      "role": "viewer",
+      "active": false
     }
   ],
   "memberships": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 2,
-      "status": true,
+      "status": false,
       "plan": "Mensual",
       "startDate": "2024-01-01",
       "endDate": "2024-01-31"
     },
     {
-      "id": 2,
+      "id": "2",
       "userId": 2,
       "status": false,
       "plan": "Trimestral",
       "startDate": "2024-02-01",
       "endDate": "2024-04-30"
+    },
+    {
+      "id": "3",
+      "userId": 3,
+      "status": true,
+      "plan": "Anual",
+      "startDate": "2024-01-01",
+      "endDate": "2024-12-31"
     }
   ],
   "plans": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Mensual",
       "description": "Acceso completo al gimnasio durante un mes.",
       "price": 30
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Trimestral",
       "description": "Acceso completo al gimnasio durante tres meses.",
       "price": 80
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Anual",
       "description": "Acceso completo al gimnasio durante un año.",
       "price": 250
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "b5f0",
+      "name": "Juan Pérez",
+      "photo": "https://img.freepik.com/foto-gratis/hombre-feliz-pie-playa_107420-9868.jpg",
+      "review": "El gimnasio ofrece un ambiente increíble y los entrenadores son muy profesionales. ¡Me siento más saludable que nunca!",
+      "date": "2024-09-01"
+    },
+    {
+      "id": "82fa",
+      "name": "María López",
+      "photo": "https://media.istockphoto.com/id/1139495106/es/foto/nunca-dejes-de-sonre%C3%ADr-ni-siquiera-cuando-est%C3%A9s-triste.jpg?s=612x612&w=0&k=20&c=VuoQMayRlMKWEvm_tRa2plOD5MTyrd_qN2Btqz0PBH4=",
+      "review": "Las clases grupales son muy dinámicas y divertidas. Además, el asesoramiento nutricional ha sido un gran plus para mí.",
+      "date": "2024-09-01"
     }
   ]
 }

@@ -9,10 +9,12 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="index.html">Gym</a>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo_gym.png" alt="Logo" width="100"> 
+            </a>
             <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="memberships.html">Membresías</a></li>
@@ -20,29 +22,46 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">Sobre Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.html">Iniciar Sesión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Registrarse</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main class="container mt-4">
         <h1>Testimonios</h1>
-        <div class="list-group">
-            <div class="list-group-item">
-                <h5 class="mb-1">Juan Pérez</h5>
-                <p class="mb-1">"El gimnasio ofrece un ambiente increíble y los entrenadores son muy profesionales. ¡Me siento más saludable que nunca!"</p>
-                <small>Miembro desde enero 2023</small>
-            </div>
-            <div class="list-group-item">
-                <h5 class="mb-1">María López</h5>
-                <p class="mb-1">"Las clases grupales son muy dinámicas y divertidas. Además, el asesoramiento nutricional ha sido un gran plus para mí."</p>
-                <small>Miembro desde marzo 2023</small>
+        <div id="testimonials-list" class="list-group">
+            <!-- Testimonios se cargarán aquí -->
+        </div>
+        <!-- Formulario para agregar un nuevo testimonio -->
+        <div class="add-testimonial">
+            <h1>Añadir tu Testimonio</h1>
+            <form id="testimonial-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="photo" class="form-label">Foto URL (Opcional)</label>
+                    <input type="text" class="form-control" id="photo" placeholder="URL de la foto">
+                </div>
+                <div class="mb-3">
+                    <label for="review" class="form-label">Reseña</label>
+                    <textarea class="form-control" id="review" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar Testimonio</button>
+            </form>
+            <div id="success-message" class="alert alert-success d-none" role="alert">
+                ¡Gracias por tu testimonio! Se ha añadido correctamente.
             </div>
         </div>
     </main>
     <footer class="bg-light py-3 mt-4">
-        <div class="container">
+        <div>
             <p class="text-center mb-0">© 2024 Gym - Todos los derechos reservados</p>
         </div>
     </footer>
+
+    <!-- Incluir el archivo JavaScript -->
+    <script src="js/testimonials.js"></script>
 </body>
 </html>
