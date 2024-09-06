@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Define la codificación de caracteres del documento -->
     <meta charset="UTF-8">
+    <!-- Hace que la página sea responsive, ajustando su tamaño para dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que se muestra en la pestaña del navegador -->
     <title>Servicios - Gym</title>
+    <!-- Enlace al archivo CSS de Bootstrap para aplicar estilos prediseñados -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace al archivo CSS personalizado para estilos adicionales -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Cabecera con la barra de navegación -->
     <header>
         <nav class="navbar navbar-expand-lg">
+            <!-- Enlace al inicio con el logo del gimnasio -->
             <a class="navbar-brand" href="index.html">
                 <img src="img/logo_gym.png" alt="Logo" width="100"> 
             </a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mx-auto">
+                    <!-- Enlaces de navegación -->
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="memberships.html">Membresías</a></li>
@@ -27,14 +35,47 @@
             </div>
         </nav>
     </header>
-    <main class="container mt-4">
-        <h1>Servicios</h1>
-        <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action">Entrenamiento Personal: Sesiones personalizadas con entrenadores certificados.</a>
-            <a href="#" class="list-group-item list-group-item-action">Clases Grupales: Yoga, pilates, spinning, aerobics, entrenamiento funcional, etc.</a>
-            <a href="#" class="list-group-item list-group-item-action">Asesoramiento Nutricional: Planes de alimentación y consultas con nutricionistas.</a>
+    
+    <!-- Sección principal de contenido sobre los servicios -->
+    <section class="container my-5">
+        <div class="row">
+            <!-- Título de la sección -->
+            <h1>Nuestros servicios</h1>
+            <!-- Cada servicio está en una columna -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-item">
+                    <!-- Imagen del servicio -->
+                    <img src="img/entrenamineto_personal.jpg" alt="Entrenamiento Personal" class="img-fluid mb-3">
+                    <!-- Título del servicio con icono -->
+                    <h3 class="feature-icon">🏋️‍♂️ Entrenamiento Personal</h3>
+                    <!-- Descripción del servicio -->
+                    <p>Sesiones personalizadas con entrenadores certificados para ayudarte a alcanzar tus metas de fitness.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-item">
+                    <!-- Imagen del servicio -->
+                    <img src="img/Clases_grupales.jpg" alt="Clases Grupales" class="img-fluid mb-3">
+                    <!-- Título del servicio con icono -->
+                    <h3 class="feature-icon">🎉 Clases Grupales</h3>
+                    <!-- Descripción del servicio -->
+                    <p>Participa en una variedad de clases como yoga, pilates, spinning, aerobics, y entrenamiento funcional.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-item">
+                    <!-- Imagen del servicio -->
+                    <img src="img/nutricion.jpeg" alt="Asesoramiento Nutricional" class="img-fluid mb-3">
+                    <!-- Título del servicio con icono -->
+                    <h3 class="feature-icon">🥗 Asesoramiento Nutricional</h3>
+                    <!-- Descripción del servicio -->
+                    <p>Recibe planes de alimentación personalizados y consultas con nuestros nutricionistas expertos.</p>
+                </div>
+            </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Pie de página -->
     <footer class="bg-light py-3 mt-4">
         <div>
             <p class="text-center mb-0">© 2024 Gym - Todos los derechos reservados</p>
@@ -42,3 +83,4 @@
     </footer>
 </body>
 </html>
+

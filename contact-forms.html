@@ -4,7 +4,7 @@
     <!-- Declaración del tipo de documento y configuración del idioma -->
     <meta charset="UTF-8"> <!-- Establece la codificación de caracteres como UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Asegura que la página se adapte a diferentes tamaños de pantalla -->
-    <title>Administración - Gym</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <title>Formularios de Contacto - Gym</title> <!-- Título de la página que aparece en la pestaña del navegador -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Enlace a la hoja de estilos de Bootstrap -->
     <link rel="stylesheet" href="css/styles.css"> <!-- Enlace a la hoja de estilos personalizada -->
 </head>
@@ -29,21 +29,19 @@
 
     <!-- Contenido principal de la página -->
     <main class="container mt-4">
-        <h1>Administración de Usuarios</h1> <!-- Encabezado principal de la página -->
+        <h1>Formularios de Contacto Recibidos</h1> <!-- Encabezado principal de la página -->
         <table class="table">
             <!-- Encabezado de la tabla -->
             <thead>
                 <tr>
                     <th>Nombre</th>
                     <th>Correo Electrónico</th>
-                    <th>Rol</th>
-                    <th>Estado</th>
-                    <th>Acciones</th>
+                    <th>Mensaje</th>
                 </tr>
             </thead>
-            <!-- Cuerpo de la tabla donde se cargarán los usuarios dinámicamente -->
-            <tbody id="userTable">
-                <!-- Aquí se cargarán los usuarios -->
+            <!-- Cuerpo de la tabla donde se cargarán los formularios dinámicamente -->
+            <tbody id="contactTable">
+                <!-- Aquí se cargarán los formularios -->
             </tbody>
         </table>
     </main>
@@ -55,7 +53,8 @@
         </div>
     </footer>
 
-    <!-- Enlace al archivo JavaScript para la administración -->
-    <script src="js/admin.js"></script>
+    <!-- Enlace al archivo JavaScript para manejar los formularios de contacto -->
+    <script src="js/contact-forms.js"></script>
 </body>
 </html>
+

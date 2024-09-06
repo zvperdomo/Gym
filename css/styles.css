@@ -1,4 +1,8 @@
-/* Estilos generales */
+/* 
+    Estilos generales para la página.
+    - Se establece una fuente global y se eliminan márgenes/paddings por defecto.
+    - Se define un color de fondo claro para toda la página.
+*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,35 +10,54 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Header */
+/* 
+    Estilos para el header:
+    - Fondo con un degradado de azul a un tono más oscuro.
+    - Color de texto blanco y espaciado interno (padding) para proporcionar separación.
+*/
 header {
     background: linear-gradient(10deg, #7ddbff 0, #5c9beb 50%, #3c5f91 100%);
     color: white;
     padding: 1rem 0;
 }
 
+/* 
+    Estilos para la barra de navegación (navbar):
+    - El contenido está centrado horizontalmente y el padding es ajustado para una apariencia más limpia.
+    - El logo se coloca a la izquierda del navbar.
+*/
 .navbar {
-    justify-content: center; /* Centra el contenido del navbar */
-    padding: 0; /* Ajusta el padding para un diseño más limpio */
+    justify-content: center;
+    padding: 0;
     position: relative;
 }
 
 .navbar-brand {
     position: absolute;
-    left: 0rem; /* Coloca el logo a la izquierda */
+    left: 0rem; /* Logo alineado a la izquierda */
 }
 
+/* 
+    Estilos para el menú de navegación:
+    - Elementos dispuestos en forma de flexbox.
+    - Los items del menú están centrados y separados por un espacio uniforme.
+*/
 .navbar-nav {
     display: flex;
-    justify-content: center; /* Centra el menú */
-    gap: 3rem; /* Añade espacio entre los elementos del menú */
+    justify-content: center;
+    gap: 3rem; /* Espaciado entre los enlaces del menú */
     margin: 0;
 }
 
 .navbar-nav .nav-item {
-    list-style: none;
+    list-style: none; /* Elimina los marcadores de lista por defecto */
 }
 
+/* 
+    Estilos para los enlaces de navegación:
+    - El color de los enlaces es blanco.
+    - Incluye una transición suave para cambiar de color al hacer hover.
+*/
 .navbar-nav .nav-link {
     color: white;
     text-decoration: none;
@@ -44,10 +67,14 @@ header {
 }
 
 .navbar-nav .nav-link:hover {
-    color: #fa8704;
+    color: #fa8704; /* Cambia a un color naranja en hover */
 }
 
-/* Footer */
+/* 
+    Estilos para el footer:
+    - Similar al header, con un degradado de color y texto en blanco.
+    - El texto está centrado.
+*/
 footer {
     background: linear-gradient(10deg, #7ddbff 0, #5c9beb 50%, #3c5f91 100%);
     color: white;
@@ -56,29 +83,40 @@ footer {
 }
 
 footer p {
-    margin: 0;
+    margin: 0; /* Elimina el margen por defecto del párrafo */
 }
 
-/* Main content spacing */
+/* 
+    Espaciado para el contenido principal (main):
+    - Se establece un padding general para separar el contenido de los bordes.
+*/
 main {
     padding: 2rem;
 }
 
-/* Formularios */
+/* 
+    Estilos para formularios:
+    - El formulario tiene un ancho máximo y está centrado en la página.
+    - Los controles de formulario tienen un espaciado inferior.
+*/
 form {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto; /* Centra el formulario */
 }
 
 form .form-control {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Espaciado inferior entre los controles del formulario */
 }
 
 form button {
-    width: 100%;
+    width: 100%; /* El botón se ajusta al ancho completo del formulario */
 }
 
-/* Servicios y otras secciones */
+/* 
+    Estilos para secciones de servicios y otros encabezados:
+    - Tamaños y márgenes ajustados para los títulos.
+    - El color de los encabezados es oscuro (#333).
+*/
 h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -89,10 +127,14 @@ h1 {
 h3 {
     font-size: 1.60rem;
     margin-bottom: 1rem;
-    text-align: centerx ;
+    text-align: center;
     color: #333;
 }
 
+/* 
+    Estilos para contenedores:
+    - Fondo con un degradado, padding interno, bordes redondeados y sombra.
+*/
 .container {
     background-color: linear-gradient(10deg, #7ddbff 0, #5c9beb 50%, #3c5f91 100%);
     padding: 2rem;
@@ -100,32 +142,50 @@ h3 {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* 
+    Estilos para listas no ordenadas:
+    - Elimina el padding por defecto y la lista de estilo.
+*/
 ul {
     padding-left: 0;
 }
 
 ul li {
-    list-style: none;
-    padding: 0.5rem 0;
+    list-style: none; /* Elimina el estilo de lista predeterminado */
+    padding: 0.5rem 0; /* Espaciado entre elementos de la lista */
     font-size: 1rem;
 }
 
 ul li:last-child {
-    border-bottom: none;
+    border-bottom: none; /* Elimina la línea inferior en el último elemento */
 }
 
+/* 
+    Estilos para imágenes:
+    - Las imágenes no sobrepasan el ancho del contenedor y mantienen su proporción.
+*/
 img {
     max-width: 100%;
     height: auto;
 }
 
+/* 
+    Estilos para elementos destacados (feature-items):
+    - Ajusta el tamaño de las imágenes y las recorta si es necesario para mantener la proporción.
+    - Bordes redondeados para las imágenes.
+*/
 .feature-item img {
     width: 100%;
-    height: 200px; /* Ajusta el valor según tus necesidades */
-    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+    height: 200px;
+    object-fit: cover; /* Recorta la imagen para llenar el contenedor manteniendo la proporción */
     border-radius: 10px;
 }
 
+/* 
+    Estilos para testimonios:
+    - Diseño de flexbox con alineación central de elementos.
+    - Bordes redondeados y espaciado interno.
+*/
 .testimonial-item {
     display: flex;
     align-items: center;
@@ -144,9 +204,14 @@ img {
 }
 
 .testimonial-item .info {
-    flex: 1;
+    flex: 1; /* Permite que el contenido textual ocupe todo el espacio restante */
 }
 
+/* 
+    Estilos para la sección de agregar testimonios:
+    - Bordes y espaciado similar a los elementos de testimonio.
+    - Fondo claro para diferenciar esta sección.
+*/
 .add-testimonial {
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -155,6 +220,11 @@ img {
     background: #f8f9fa;
 }
 
+/* 
+    Estilos para mensajes de alerta de éxito:
+    - Añade margen superior para separarlo de otros elementos.
+*/
 .alert-success {
     margin-top: 15px;
 }
+

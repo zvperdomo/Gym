@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Gym</title>
+    <!-- Carga de Bootstrap CSS desde CDN para el diseño de la página -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Carga de la hoja de estilos personalizada -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="index.html">
-                <img src="img/logo_gym.png" alt="Logo" width="100"> <!-- Añade tu logo aquí -->
+                <!-- Logo del gimnasio -->
+                <img src="img/logo_gym.png" alt="Logo" width="100">
             </a>
             <div class="collapse navbar-collapse">
+                <!-- Menú de navegación -->
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li>
@@ -27,14 +31,271 @@
             </div>
         </nav>
     </header>
+
     <main class="container mt-4">
-        <h1>Bienvenido a Power GYM</h1>
-        <p>Descubre nuestros servicios y membresías.</p>
+        <h1 class="text-center mb-4">Bienvenido a Power GYM</h1>
+
+        <!-- Noticias Destacadas -->
+        <section class="featured-news">
+            <h2 class="text-center mb-4">Noticias Destacadas</h2>
+            <div class="row justify-content-center">
+                <!-- Tarjeta de noticia 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="img/Equipamiento.jpeg" class="card-img-top" alt="Noticia 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Nueva Instalación de Equipos</h5>
+                            <p class="card-text">Hemos renovado nuestras instalaciones con equipos de última tecnología.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newsModal1">Ver Más</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta de noticia 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="img/entrenadores.jpg" class="card-img-top" alt="Noticia 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Nuevo Entrenador Personal</h5>
+                            <p class="card-text">Conoce a nuestro nuevo entrenador personal certificado que se une al equipo.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newsModal2">Ver Más</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta de noticia 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="img/promociones_orig.jpg" class="card-img-top" alt="Noticia 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Promociones Exclusivas</h5>
+                            <p class="card-text">Aprovecha nuestras promociones exclusivas para nuevos miembros.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newsModal3">Ver Más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Novedades -->
+        <section class="latest-updates">
+            <h2 class="text-center mb-4">Novedades</h2>
+            <div class="row justify-content-center">
+                <!-- Tarjeta de novedad 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="img/horarios.png" class="card-img-top" alt="Novedad 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Actualización de Horarios</h5>
+                            <p class="card-text">Hemos actualizado nuestros horarios de apertura para adaptarnos mejor a tus necesidades.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal1">Ver Más</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta de novedad 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="img/programa-de-recompensas-basado-en-el-equipo.png" class="card-img-top" alt="Novedad 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Nuevo Programa de Recompensas</h5>
+                            <p class="card-text">Ahora puedes ganar recompensas y descuentos con nuestro nuevo programa de lealtad.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal2">Ver Más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Temas Relacionados -->
+        <section class="related-topics">
+            <h2 class="text-center mb-4">Temas Relacionados</h2>
+            <div class="row justify-content-center">
+                <!-- Tarjeta de tema 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="img/nutricion.jpeg" class="card-img-top" alt="Tema 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Nutrición y Fitness</h5>
+                            <p class="card-text">Descubre cómo una nutrición adecuada puede mejorar tus resultados en el gimnasio.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#topicModal1">Ver Más</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta de tema 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="img/entrenamineto_casa.jpg" class="card-img-top" alt="Tema 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Entrenamiento en Casa</h5>
+                            <p class="card-text">Explora rutinas y ejercicios que puedes hacer en casa para mantenerte en forma.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#topicModal2">Ver Más</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta de tema 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="img/Recuperación_y_Bienestar.jpeg" class="card-img-top" alt="Tema 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Recuperación y Bienestar</h5>
+                            <p class="card-text">Aprende sobre técnicas de recuperación para optimizar tus entrenamientos y prevenir lesiones.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#topicModal3">Ver Más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="bg-light py-3 mt-4">
-        <div>
-            <p class="text-center mb-0">© 2024 Gym - Todos los derechos reservados</p>
+
+    <!-- Modales para Noticias Destacadas -->
+    <div class="modal fade" id="newsModal1" tabindex="-1" aria-labelledby="newsModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newsModalLabel1">Nueva Instalación de Equipos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/Equipamiento.jpeg" class="img-fluid mb-3" alt="Noticia 1">
+                    <p>Hemos renovado nuestras instalaciones con equipos de última tecnología para mejorar tu experiencia en el gimnasio. Ven y comprueba las mejoras por ti mismo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
+
+    <div class="modal fade" id="newsModal2" tabindex="-1" aria-labelledby="newsModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newsModalLabel2">Nuevo Entrenador Personal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/entrenadores.jpg" class="img-fluid mb-3" alt="Noticia 2">
+                    <p>Conoce a nuestro nuevo entrenador personal certificado que se une al equipo para ofrecerte entrenamientos más personalizados y efectivos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="newsModal3" tabindex="-1" aria-labelledby="newsModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newsModalLabel3">Promociones Exclusivas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/promociones_orig.jpg" class="img-fluid mb-3" alt="Noticia 3">
+                    <p>Aprovecha nuestras promociones exclusivas para nuevos miembros y disfruta de grandes descuentos en nuestras membresías.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modales para Novedades -->
+    <div class="modal fade" id="updateModal1" tabindex="-1" aria-labelledby="updateModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateModalLabel1">Actualización de Horarios</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/horarios.png" class="img-fluid mb-3" alt="Novedad 1">
+                    <p>Hemos actualizado nuestros horarios de apertura para adaptarnos mejor a tus necesidades. Consulta nuestros nuevos horarios en la sección de contacto.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="updateModal2" tabindex="-1" aria-labelledby="updateModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateModalLabel2">Nuevo Programa de Recompensas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/programa-de-recompensas-basado-en-el-equipo.png" class="img-fluid mb-3" alt="Novedad 2">
+                    <p>Ahora puedes ganar recompensas y descuentos con nuestro nuevo programa de lealtad. Participa y aprovecha los beneficios exclusivos para miembros.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modales para Temas Relacionados -->
+    <div class="modal fade" id="topicModal1" tabindex="-1" aria-labelledby="topicModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="topicModalLabel1">Nutrición y Fitness</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/nutricion.jpeg" class="img-fluid mb-3" alt="Tema 1">
+                    <p>Descubre cómo una nutrición adecuada puede mejorar tus resultados en el gimnasio. Consulta nuestros consejos y planes nutricionales para optimizar tu rendimiento.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="topicModal2" tabindex="-1" aria-labelledby="topicModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="topicModalLabel2">Entrenamiento en Casa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/entrenamineto_casa.jpg" class="img-fluid mb-3" alt="Tema 2">
+                    <p>Explora rutinas y ejercicios que puedes hacer en casa para mantenerte en forma. Aprovecha nuestros recursos para entrenar eficazmente sin necesidad de ir al gimnasio.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="topicModal3" tabindex="-1" aria-labelledby="topicModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="topicModalLabel3">Recuperación y Bienestar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/Recuperación_y_Bienestar.jpeg" class="img-fluid mb-3" alt="Tema 3">
+                    <p>Aprende sobre técnicas de recuperación para optimizar tus entrenamientos y prevenir lesiones. Conoce nuestros consejos y métodos para mantener un bienestar integral.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carga de Bootstrap JS y dependencias desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+

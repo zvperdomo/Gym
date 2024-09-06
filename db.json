@@ -9,66 +9,82 @@
       "active": true
     },
     {
-      "id": "2",
-      "name": "María López",
-      "email": "maria@gmail.com",
-      "password": "654321",
+      "id": "1725645595527",
+      "name": "zully perdomo",
+      "email": "zully13gpvan@gmail.com",
+      "password": "123456",
       "role": "viewer",
       "active": true
     },
     {
-      "id": "3",
-      "name": "Carlos Sánchez",
-      "email": "carlos@gmail.com",
-      "password": "password123",
+      "id": "1725650517053",
+      "name": "Maria gomez",
+      "email": "maria2@gmail.com",
+      "password": "123456",
       "role": "viewer",
       "active": false
     }
   ],
   "memberships": [
     {
-      "id": "1",
-      "userId": 2,
+      "id": "0081",
+      "userId": "1725645595527",
       "status": false,
-      "plan": "Mensual",
-      "startDate": "2024-01-01",
-      "endDate": "2024-01-31"
+      "planName": "Membresía Elite",
+      "planDescription": "La Membresía Elite está diseñada para quienes desean aprovechar al máximo todas las ventajas que ofrece nuestro gimnasio. Esta membresía proporciona acceso prioritario a todas nuestras áreas y clases premium, entrenamiento personal ilimitado, asesoramiento nutricional personalizado y acceso a eventos exclusivos para miembros. Es la opción ideal para aquellos que buscan un nivel de atención y exclusividad superior.\n\nBeneficios Incluidos:\n\nAcceso prioritario y exclusivo a todas las áreas del gimnasio.\nParticipación en clases grupales premium (como yoga avanzado y pilates).\nEntrenamiento personal ilimitado con nuestros mejores entrenadores.\nAsesoramiento nutricional personalizado para un plan de alimentación adaptado a tus necesidades.\nAcceso a eventos y talleres exclusivos solo para miembros Elite.",
+      "startDate": "2024-09-06",
+      "endDate": "2024-10-06",
+      "price": "120.000"
     },
     {
-      "id": "2",
-      "userId": 2,
+      "id": "a0ac",
+      "userId": "1725645595527",
       "status": false,
-      "plan": "Trimestral",
-      "startDate": "2024-02-01",
-      "endDate": "2024-04-30"
+      "planName": "Membresía Premium",
+      "planDescription": "La Membresía Premium ofrece un acceso más completo a nuestras instalaciones y servicios. No solo tendrás acceso a todas las áreas del gimnasio, sino que también podrás disfrutar de clases grupales ilimitadas, sesiones de entrenamiento personal y asesoramiento nutricional. Perfecta para quienes buscan un enfoque más integral hacia el bienestar físico.\n\nBeneficios Incluidos:\n\nAcceso completo a todas las áreas del gimnasio, incluyendo áreas de pesas, cardio y zonas de relajación.\nParticipación ilimitada en todas las clases grupales.\nSesiones de entrenamiento personal (hasta 2 sesiones por mes).\nAsesoramiento nutricional para optimizar tu rendimiento y resultados.",
+      "startDate": "2024-09-06",
+      "endDate": "2024-10-06",
+      "price": "80.000"
     },
     {
-      "id": "3",
-      "userId": 3,
+      "id": "c506",
+      "userId": "1725650517053",
       "status": true,
-      "plan": "Anual",
-      "startDate": "2024-01-01",
-      "endDate": "2024-12-31"
+      "planName": "Membresía Básica",
+      "planDescription": "La Membresía Básica es ideal para quienes buscan una opción accesible para comenzar su viaje de fitness. Con esta membresía, tendrás acceso a nuestras áreas comunes y podrás participar en clases grupales básicas. También incluye una sesión de asesoramiento inicial para ayudarte a establecer tus objetivos de entrenamiento.\n\nBeneficios Incluidos:\n\nAcceso a las áreas comunes del gimnasio.\nParticipación en clases grupales básicas (como aeróbicos y estiramientos).\nAsesoramiento inicial gratuito con uno de nuestros entrenadores para personalizar tu plan de entrenamiento.",
+      "price": "40.000",
+      "startDate": "2024-09-06",
+      "endDate": "2024-10-06"
+    },
+    {
+      "id": "f644",
+      "userId": "1725645595527",
+      "status": true,
+      "planName": "Membresía Premium",
+      "planDescription": "La Membresía Premium ofrece un acceso más completo a nuestras instalaciones y servicios. No solo tendrás acceso a todas las áreas del gimnasio, sino que también podrás disfrutar de clases grupales ilimitadas, sesiones de entrenamiento personal y asesoramiento nutricional. Perfecta para quienes buscan un enfoque más integral hacia el bienestar físico.\n\nBeneficios Incluidos:\n\nAcceso completo a todas las áreas del gimnasio, incluyendo áreas de pesas, cardio y zonas de relajación.\nParticipación ilimitada en todas las clases grupales.\nSesiones de entrenamiento personal (hasta 2 sesiones por mes).\nAsesoramiento nutricional para optimizar tu rendimiento y resultados.",
+      "price": "80.000",
+      "startDate": "2024-09-06",
+      "endDate": "2024-10-06"
     }
   ],
   "plans": [
     {
-      "id": "1",
-      "name": "Mensual",
-      "description": "Acceso completo al gimnasio durante un mes.",
-      "price": 30
+      "id": "3201",
+      "name": "Membresía Básica",
+      "description": "La Membresía Básica es ideal para quienes buscan una opción accesible para comenzar su viaje de fitness. Con esta membresía, tendrás acceso a nuestras áreas comunes y podrás participar en clases grupales básicas. También incluye una sesión de asesoramiento inicial para ayudarte a establecer tus objetivos de entrenamiento.\n\nBeneficios Incluidos:\n\nAcceso a las áreas comunes del gimnasio.\nParticipación en clases grupales básicas (como aeróbicos y estiramientos).\nAsesoramiento inicial gratuito con uno de nuestros entrenadores para personalizar tu plan de entrenamiento.",
+      "price": "40.000"
     },
     {
-      "id": "2",
-      "name": "Trimestral",
-      "description": "Acceso completo al gimnasio durante tres meses.",
-      "price": 80
+      "id": "6270",
+      "name": "Membresía Premium",
+      "description": "La Membresía Premium ofrece un acceso más completo a nuestras instalaciones y servicios. No solo tendrás acceso a todas las áreas del gimnasio, sino que también podrás disfrutar de clases grupales ilimitadas, sesiones de entrenamiento personal y asesoramiento nutricional. Perfecta para quienes buscan un enfoque más integral hacia el bienestar físico.\n\nBeneficios Incluidos:\n\nAcceso completo a todas las áreas del gimnasio, incluyendo áreas de pesas, cardio y zonas de relajación.\nParticipación ilimitada en todas las clases grupales.\nSesiones de entrenamiento personal (hasta 2 sesiones por mes).\nAsesoramiento nutricional para optimizar tu rendimiento y resultados.",
+      "price": "80.000"
     },
     {
-      "id": "3",
-      "name": "Anual",
-      "description": "Acceso completo al gimnasio durante un año.",
-      "price": 250
+      "id": "771b",
+      "name": "Membresía Elite",
+      "description": "La Membresía Elite está diseñada para quienes desean aprovechar al máximo todas las ventajas que ofrece nuestro gimnasio. Esta membresía proporciona acceso prioritario a todas nuestras áreas y clases premium, entrenamiento personal ilimitado, asesoramiento nutricional personalizado y acceso a eventos exclusivos para miembros. Es la opción ideal para aquellos que buscan un nivel de atención y exclusividad superior.\n\nBeneficios Incluidos:\n\nAcceso prioritario y exclusivo a todas las áreas del gimnasio.\nParticipación en clases grupales premium (como yoga avanzado y pilates).\nEntrenamiento personal ilimitado con nuestros mejores entrenadores.\nAsesoramiento nutricional personalizado para un plan de alimentación adaptado a tus necesidades.\nAcceso a eventos y talleres exclusivos solo para miembros Elite.",
+      "price": "120.000"
     }
   ],
   "testimonials": [
@@ -85,6 +101,33 @@
       "photo": "https://media.istockphoto.com/id/1139495106/es/foto/nunca-dejes-de-sonre%C3%ADr-ni-siquiera-cuando-est%C3%A9s-triste.jpg?s=612x612&w=0&k=20&c=VuoQMayRlMKWEvm_tRa2plOD5MTyrd_qN2Btqz0PBH4=",
       "review": "Las clases grupales son muy dinámicas y divertidas. Además, el asesoramiento nutricional ha sido un gran plus para mí.",
       "date": "2024-09-01"
+    },
+    {
+      "id": "8da9",
+      "name": "zully perdomo",
+      "photo": "img/imgtestimonios.png",
+      "review": "demo1",
+      "date": "2024-09-06"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "1",
+      "name": "Juan Pérez",
+      "email": "juan.perez@example.com",
+      "message": "Estoy interesado en obtener más información sobre sus servicios."
+    },
+    {
+      "id": "2bea",
+      "name": "zully perdomo",
+      "email": "zully13gpvan@gmail.com",
+      "message": "demo1"
+    },
+    {
+      "id": "1657",
+      "name": "zully perdomo",
+      "email": "zullyp@gmail.com",
+      "message": "demo 2"
     }
   ]
 }

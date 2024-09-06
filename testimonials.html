@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Define la codificación de caracteres del documento -->
     <meta charset="UTF-8">
+    <!-- Hace que la página sea responsive, ajustando su tamaño para dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que se muestra en la pestaña del navegador -->
     <title>Testimonios - Gym</title>
+    <!-- Enlace al archivo CSS de Bootstrap para aplicar estilos prediseñados -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace al archivo CSS personalizado para estilos adicionales -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Cabecera con la barra de navegación -->
     <header>
         <nav class="navbar navbar-expand-lg">
+            <!-- Enlace al inicio con el logo del gimnasio -->
             <a class="navbar-brand" href="index.html">
                 <img src="img/logo_gym.png" alt="Logo" width="100"> 
             </a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mx-auto">
+                    <!-- Enlaces de navegación -->
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="memberships.html">Membresías</a></li>
@@ -27,13 +35,18 @@
             </div>
         </nav>
     </header>
+    
+    <!-- Sección principal para mostrar y agregar testimonios -->
     <main class="container mt-4">
+        <!-- Título de la sección -->
         <h1>Testimonios</h1>
+        <!-- Contenedor para la lista de testimonios -->
         <div id="testimonials-list" class="list-group">
             <!-- Testimonios se cargarán aquí -->
         </div>
+        
         <!-- Formulario para agregar un nuevo testimonio -->
-        <div class="add-testimonial">
+        <div class="add-testimonial mt-5">
             <h1>Añadir tu Testimonio</h1>
             <form id="testimonial-form">
                 <div class="mb-3">
@@ -50,18 +63,20 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar Testimonio</button>
             </form>
-            <div id="success-message" class="alert alert-success d-none" role="alert">
+            <div id="success-message" class="alert alert-success d-none mt-3" role="alert">
                 ¡Gracias por tu testimonio! Se ha añadido correctamente.
             </div>
         </div>
     </main>
+    
+    <!-- Pie de página -->
     <footer class="bg-light py-3 mt-4">
         <div>
             <p class="text-center mb-0">© 2024 Gym - Todos los derechos reservados</p>
         </div>
     </footer>
 
-    <!-- Incluir el archivo JavaScript -->
+    <!-- Incluir el archivo JavaScript para funcionalidad adicional -->
     <script src="js/testimonials.js"></script>
 </body>
 </html>
