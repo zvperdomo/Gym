@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Realiza una solicitud GET a un servidor local para obtener la lista de usuarios.
         La respuesta se convierte a formato JSON y se procesa para llenar una tabla HTML.
     */
-    fetch('http://localhost:3000/users')
+    fetch('https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/users')
         .then(response => response.json()) // Convierte la respuesta a JSON
         .then(users => {
             // Selecciona el elemento de la tabla donde se mostrarán los usuarios
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Finalmente, se envía una solicitud PUT al servidor para actualizar al usuario.
 */
 function toggleUserStatus(userId) {
-    fetch(`http://localhost:3000/users/${userId}`)
+    fetch(`https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/users/${userId}`)
         .then(response => response.json()) // Obtiene los datos del usuario como JSON
         .then(user => {
             // Crea una copia del usuario con el campo 'active' invertido
@@ -62,7 +62,7 @@ function toggleUserStatus(userId) {
             };
 
             // Envía una solicitud PUT para actualizar el estado del usuario en el servidor
-            fetch(`http://localhost:3000/users/${userId}`, {
+            fetch(`https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/users/${userId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -82,7 +82,7 @@ function toggleUserStatus(userId) {
 */
 function deleteUser(userId) {
     if (confirm('¿Estás seguro de que deseas eliminar este usuario?')) {
-        fetch(`http://localhost:3000/users/${userId}`, {
+        fetch(`https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/users/${userId}`, {
             method: 'DELETE' // Solicitud DELETE para eliminar el usuario
         })
         .then(() => location.reload()); // Recarga la página después de eliminar al usuario

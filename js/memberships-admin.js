@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Determina si es una actualización (PUT) o una creación (POST)
         const method = id ? 'PUT' : 'POST';
-        const url = id ? `http://localhost:3000/plans/${id}` : 'http://localhost:3000/plans';
+        const url = id ? `https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/plans/${id}` : 'https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/plans';
 
         // Envía los datos al servidor
         fetch(url, {
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para cargar las membresías disponibles
     function loadMemberships() {
-        fetch('http://localhost:3000/plans')
+        fetch('https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/plans')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Error al cargar las membresías'); // Maneja errores de respuesta
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.querySelectorAll('.editMembershipBtn').forEach(btn => {
                         btn.addEventListener('click', event => {
                             const membershipId = event.target.getAttribute('data-id');
-                            fetch(`http://localhost:3000/plans/${membershipId}`)
+                            fetch(`https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/plans/${membershipId}`)
                                 .then(response => {
                                     if (!response.ok) {
                                         throw new Error('Error al cargar los datos de la membresía');
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         btn.addEventListener('click', event => {
                             const membershipId = event.target.getAttribute('data-id');
                             if (confirm('¿Estás seguro de que quieres eliminar esta membresía?')) {
-                                fetch(`http://localhost:3000/plans/${membershipId}`, { method: 'DELETE' })
+                                fetch(`https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/plans/${membershipId}`, { method: 'DELETE' })
                                     .then(() => loadMemberships()) // Recarga la lista después de eliminar
                                     .catch(error => console.error('Error al eliminar la membresía:', error));
                             }
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadMemberships();
 
     // Cargar las membresías adquiridas por los clientes
-    fetch('http://localhost:3000/memberships')
+    fetch('https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/memberships')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Error al cargar las membresías adquiridas'); // Maneja errores de respuesta
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(membershipsData => {
             // Cargar los usuarios para vincularlos a sus membresías adquiridas
-            fetch('http://localhost:3000/users')
+            fetch('https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/users')
                 .then(response => response.json())
                 .then(usersData => {
                     const acquiredMembershipsTable = document.getElementById('acquiredMembershipsTable');

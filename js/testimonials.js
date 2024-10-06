@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para cargar testimonios desde la base de datos
     function loadTestimonials() {
-        fetch('http://localhost:3000/testimonials') // URL del servidor JSON
+        fetch('https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/testimonials') // URL del servidor JSON
             .then(response => response.json()) // Convertir la respuesta a JSON
             .then(data => {
                 testimonialsList.innerHTML = ''; // Limpiar la lista antes de cargar nuevos datos
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // Enviar el nuevo testimonio a la base de datos
-        fetch('http://localhost:3000/testimonials', { // URL del servidor JSON
+        fetch('https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/testimonials', { // URL del servidor JSON
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

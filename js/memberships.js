@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const membershipContainer = document.getElementById('membershipContainer');
 
     // Realiza una solicitud para obtener los planes de membresía desde la base de datos
-    fetch('http://localhost:3000/plans')
+    fetch('https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/plans')
         .then(response => response.json()) // Convierte la respuesta en formato JSON
         .then(plans => {
             // Limpia el contenedor en caso de que tenga contenido existente

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const message = document.getElementById('message').value;
 
         // Realiza una solicitud POST para enviar los datos del formulario al servidor
-        fetch('http://localhost:3000/contacts', {
+        fetch('https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/contacts', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',  // Define que el contenido es JSON

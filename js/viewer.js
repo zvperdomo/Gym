@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const updatedEmail = document.getElementById("email").value;
 
         // Enviar una solicitud PATCH para actualizar los datos del usuario
-        fetch(`http://localhost:3000/users/${user.id}`, {
+        fetch(`https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/users/${user.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Función para cargar los detalles de la membresía del usuario
     function loadMembershipDetails() {
-        fetch(`http://localhost:3000/memberships?userId=${user.id}`)
+        fetch(`https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/memberships?userId=${user.id}`)
         .then(response => response.json()) // Convertir la respuesta a JSON
         .then(memberships => {
             const activeMembership = memberships.find(m => m.status === true); // Buscar la membresía activa
@@ -95,12 +95,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Manejar clic en el botón de cancelar membresía
     document.getElementById("cancelMembership").addEventListener("click", function () {
-        fetch(`http://localhost:3000/memberships?userId=${user.id}&status=true`)
+        fetch(`https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/memberships?userId=${user.id}&status=true`)
         .then(response => response.json()) // Convertir la respuesta a JSON
         .then(memberships => {
             const activeMembership = memberships[0]; // Obtener la primera membresía activa
             if (activeMembership) {
-                fetch(`http://localhost:3000/memberships/${activeMembership.id}`, {
+                fetch(`https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/memberships/${activeMembership.id}`, {
                     method: "PATCH",
                     headers: {
                         "Content-Type": "application/json"
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Manejar clic en el botón de cambiar membresía
     document.getElementById("changeMembership").addEventListener("click", function () {
-        fetch(`http://localhost:3000/plans`)
+        fetch(`https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/plans`)
         .then(response => response.json()) // Obtener los planes disponibles
         .then(plans => {
             const plansContainer = document.getElementById("plansContainer");
@@ -158,13 +158,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const startDate = new Date().toISOString().split('T')[0];
         const endDate = new Date(new Date().setMonth(new Date().getMonth() + 1)).toISOString().split('T')[0];
 
-        fetch(`http://localhost:3000/memberships?userId=${user.id}&status=true`)
+        fetch(`https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/memberships?userId=${user.id}&status=true`)
         .then(response => response.json())
         .then(memberships => {
             const activeMembership = memberships[0]; // Obtener la membresía activa
             if (activeMembership) {
                 // Actualizar la membresía existente
-                fetch(`http://localhost:3000/memberships/${activeMembership.id}`, {
+                fetch(`https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/memberships/${activeMembership.id}`, {
                     method: "PATCH",
                     headers: {
                         "Content-Type": "application/json"
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Manejar clic en el botón de nueva membresía
     document.getElementById("newMembership").addEventListener("click", function () {
-        fetch(`http://localhost:3000/plans`)
+        fetch(`https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/plans`)
         .then(response => response.json()) // Obtener los planes disponibles
         .then(plans => {
             const plansContainer = document.getElementById("plansContainer");
@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const startDate = new Date().toISOString().split('T')[0];
         const endDate = new Date(new Date().setMonth(new Date().getMonth() + 1)).toISOString().split('T')[0];
 
-        fetch(`http://localhost:3000/memberships`, {
+        fetch(`https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/memberships`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

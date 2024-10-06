@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     
     // Realiza una solicitud GET al servidor local para obtener los formularios de contacto enviados
-    fetch('http://localhost:3000/contacts')  // Asegúrate de que la URL es la correcta
+    fetch('https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/contacts')  // Asegúrate de que la URL es la correcta
         .then(response => {
             // Verifica que la respuesta del servidor es correcta
             if (!response.ok) {

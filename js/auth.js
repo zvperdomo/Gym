@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const password = document.getElementById('password').value;
 
             // Realiza una solicitud GET al servidor local para obtener la lista de usuarios
-            fetch('http://localhost:3000/users')
+            fetch('https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/users')
                 .then(response => response.json()) // Convierte la respuesta en un objeto JSON
                 .then(users => {
                     // Busca un usuario que coincida con el correo electrónico y contraseña proporcionados
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             // Realiza una solicitud POST para registrar el nuevo usuario en el servidor local
-            fetch('http://localhost:3000/users', {
+            fetch('https://gymapp-eab6efeffcbsc9b5.westeurope-01.azurewebsites.net/api/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json' // Define el tipo de contenido como JSON
